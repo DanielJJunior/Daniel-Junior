@@ -13,7 +13,7 @@ login
 transport input ssh
 exec-timeout 10
 exit
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username Estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
@@ -96,7 +96,7 @@ login
 transport input ssh
 exec-timeout 10
 exit
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username Estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
@@ -179,7 +179,7 @@ login
 transport input ssh
 exec-timeout 10
 exit
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username Estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
@@ -262,7 +262,7 @@ login
 transport input ssh
 exec-timeout 10
 exit
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username Estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
