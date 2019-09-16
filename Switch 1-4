@@ -7,7 +7,7 @@ banner motd "ACESSO AUTORIZADO PARA O DEPARTAMENTO DE TI!"
 enable secret SenhaEnable
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
@@ -86,7 +86,7 @@ banner motd "ACESSO AUTORIZADO PARA O DEPARTAMENTO DE TI!"
 enable secret SenhaEnable
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
@@ -165,7 +165,7 @@ banner motd "ACESSO AUTORIZADO PARA O DEPARTAMENTO DE TI!"
 enable secret SenhaEnable
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username estagiario privilege 1 secret Batata02 
 line console 0
 password SenhadaConsole
@@ -244,7 +244,7 @@ banner motd "ACESSO AUTORIZADO PARA O DEPARTAMENTO DE TI!"
 enable secret SenhaEnable
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
-username Yohan privilege 15 secret Batata01
+username Daniel privilege 15 secret Senai
 username estagiario privilege 1 secret Batata02
 line console 0
 password SenhadaConsole
