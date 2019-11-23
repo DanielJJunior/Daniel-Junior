@@ -1,0 +1,168 @@
+Sw-04
+
+enable
+conf t
+hostname Sw-04
+interface g0/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50,60,70,80,88,90,100,200
+switchport trunk native vlan 88
+vlan 88
+vlan 90
+vlan 200
+interface vlan 88
+ip add 172.168.0.254 255.240.0.0
+exit
+interface f0/1
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/2
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/3
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/4
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/5
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/6
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/7
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/8
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/9
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/10
+switchport access vlan 200
+no sh
+interface f0/11
+switchport mode access
+switchport access vlan 200
+no sh
+interface f0/12
+switchport mode access
+switchport access vlan 200
+no sh
+interface f0/13
+switchport mode access
+switchport access vlan 90
+no sh
+interface f0/14
+switchport mode access
+switchport access vlan 90
+no sh
+interface f0/15
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/16
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/17
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/18
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/19
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/20
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/21
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/22
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/23
+switchport mode access
+switchport access vlan 88
+no sh
+interface f0/24
+switchport mode access
+switchport access vlan 88
+no sh
+exit
+ip default-gateway 192.168.32.1 
+do wr
+======================================================
+RT-04
+
+enable 
+conf t
+username Daniel privilege 15 secret D@nielJuni0r
+interface g0/1
+no sh
+interface g0/1.88
+encapsulation dot1Q 88
+ip add 172.16.0.1 255.240.0.0
+no sh 
+description SERVIDORES E MONITORAMENTO
+exit
+interface g0/1.90
+encapsulation dot1Q 90
+ip add 172.96.0.1 255.255.254.0
+no sh 
+description IPS TACACS
+exit
+interface g0/1.200
+encapsulation dot1Q 200
+ip add 172.32.0.1 255.255.192.0
+no sh 
+description VOZ
+exit
+interface serial 0/0/0
+ip add 201.187.89.2 255.255.255.252
+no sh
+interface serial 0/1/1
+ip add 201.187.89.18 255.255.255.252
+no sh
+interface serial 0/0/1
+ip add 201.187.89.14 255.255.255.252
+no sh
+exit
+ip route 10.0.0.0 255.0.0.0 201.187.89.1
+ip route 10.0.0.0 255.0.0.0 201.187.89.17
+ip route 10.0.0.0 255.0.0.0 201.187.89.12
+ip route 192.168.32.0 255.255.248.0 201.187.89.1
+ip route 192.168.32.0 255.255.248.0 201.187.89.17
+ip route 192.168.32.0 255.255.248.0 201.187.89.12
+ip route 192.168.0.0 255.255.224.0 201.187.89.1
+ip route 192.168.0.0 255.255.224.0 201.187.89.17
+ip route 192.168.0.0 255.255.224.0 201.187.89.12
+ip route 201.187.89.4 255.255.255.252 201.187.89.1
+ip route 201.187.89.4 255.255.255.252 201.187.89.17
+ip route 201.187.89.4 255.255.255.252 201.187.89.12
+ip route 201.187.89.20 255.255.255.252 201.187.89.1
+ip route 201.187.89.20 255.255.255.252 201.187.89.17
+ip route 201.187.89.20 255.255.255.252 201.187.89.12
+ip route 201.187.89.8 255.255.255.252 201.187.89.1
+ip route 201.187.89.8 255.255.255.252 201.187.89.17
+ip route 201.187.89.8 255.255.255.252 201.187.89.12
+do wr
