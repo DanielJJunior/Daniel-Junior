@@ -78,6 +78,9 @@ systemctl restart networking
 
 systemctl status networking
 
+*Dns do Debian
+vim /etc/resolv.conf
+
 * VER INTERFACES -
 
 ip add
