@@ -145,3 +145,9 @@ FAZENDO UM SITES
 
 
 -----------------------------------------------------
+Resetar SENHA Root
+Ao iniciar o Linux "Apertar E"
+ir na linha linux
+ao iniciar usar o comando passwd
+ir ate o arquivo em /shadow
+
