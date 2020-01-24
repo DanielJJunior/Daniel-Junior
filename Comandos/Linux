@@ -71,6 +71,7 @@ ifdown ens34 && ifup ens34
 * DESLIGAR E LIGAR DE UMA VEZ SÓ - 
 
 systemctl restart networking
+/etc/init.d/networking restart
 
 
 * VER OQ DEU DE ERRADO - 
