@@ -155,3 +155,63 @@ ir na linha linux
 ao iniciar usar o comando passwd
 ir ate o arquivo em /shadow
 
+
+====================================================
+iptables
+
+iptables-save > *Onde salvar*
+iptables-restore < *Onde esta*
+touch firewall.restritivo
+#!/bin/bash (poder ser executavel)
++	#Declarar politica padrão como restriva
+	iptables -P IMPUT DROP
+	iptables -P OUTPUT DROP
+	iptables -P FORWARD DROP
+	
+	#Liberar acesso á interface loopback
+	iptables -A IMPUT -i lo -j ACCEPT
+	iptables -A OUTPUT -o lo -j ACCEPT
+	
+	#listar configuação atual
+	iptables -L -nv
+chmod 744 firewall.restritivo
+
+
+touch  panico
+vim panico 
++	#!bin/bash
+	#DECLARAR POLITICA PADRAO COMO PERMISSIVA
+	iptables -P IMPUT ACCEPT
+	iptables -P OUTPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	
+	#LIMPAR AS CHAINS
+	iptables -F 
+	
+	#LISTAR
+	iptables -L -nv
+chmod 744 Panico
+./firewall.restritivo
+	
+	
+#!/bin/bash (poder ser executavel)
++	#LIMPAR
+	./panico
+
+	#Declarar politica padrão como restriva
+	iptables -P IMPUT DROP
+	iptables -P OUTPUT DROP
+	iptables -P FORWARD DROP
+	
+	#Liberar acesso á interface loopback
+	iptables -A IMPUT -i lo -j ACCEPT
+	iptables -A OUTPUT -o lo -j ACCEPT
+	
+	#listar configuação atual
+	iptables -L -nv
+	
+	vim /etc/rc.local
+
+#CARREGAR CONFIGURAÇÕES DO FIREWALL IP TABLES
++	./root/firewall.restritivo
+====================================================
