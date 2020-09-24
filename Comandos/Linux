@@ -16,6 +16,7 @@ chown <usuario>:<grupo> /diretorio - colocar o usuario e grupo como donos da pas
 passwd <usuario> - colocar ou mudar a senha do usuario escolhido
 cat /diretorio - ver oq tem dentro do diretorio ou arquivo
 hostnamectl set-hostname <nome do debian>
+versao debian cat /etc/debian_version
 
 EXCLUIR UM PROGRAMA
 
