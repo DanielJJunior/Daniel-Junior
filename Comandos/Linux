@@ -20,6 +20,8 @@ versao debian cat /etc/debian_version
 mostra as informaçoes do apt : apt show 'apt"
 mostra se opatfoi instaldo : dpkg -l
 
+
+
 EXCLUIR UM PROGRAMA
 
 apt-get purge <programa> - apagar programa
@@ -218,3 +220,37 @@ chmod 744 Panico
 #CARREGAR CONFIGURAÇÕES DO FIREWALL IP TABLES
 +	./root/firewall.restritivo
 ====================================================
+Criar um Serviço
+nano firewall.sh 
+- 
+#!/bin/bash
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -X
+iptables -F
+iptables -t nat -X
+iptables -t nat -F
+iptables -t nat -A POSTROUTING -o ens33 -j MASQUERADE
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+chmod 755 firewall.sh
+
+dentro do : vim /lib/systemd/system/'nomearquivo'.service
+
+[Unit]
+Description=Firewall
+After=network.service  
+ 
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/root/firewall.sh start  					
+ExecStop=/root/firewall.sh stop
+ExecReload=/root/firewall.sh restart
+ 
+[Install]
+WantedBy=multi-user.target  
+
+systemctl daemon-reload
+systemctl status firewall.service
+systemctl start firewall.service
