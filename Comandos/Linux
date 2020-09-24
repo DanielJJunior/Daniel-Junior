@@ -17,7 +17,9 @@ passwd <usuario> - colocar ou mudar a senha do usuario escolhido
 cat /diretorio - ver oq tem dentro do diretorio ou arquivo
 hostnamectl set-hostname <nome do debian>
 versao debian cat /etc/debian_version
-mostra as informaçoes do apt  apt show 'apt"
+mostra as informaçoes do apt : apt show 'apt"
+mostra se opatfoi instaldo : dpkg -i ou l
+
 EXCLUIR UM PROGRAMA
 
 apt-get purge <programa> - apagar programa
