@@ -18,7 +18,7 @@ cat /diretorio - ver oq tem dentro do diretorio ou arquivo
 hostnamectl set-hostname <nome do debian>
 versao debian cat /etc/debian_version
 mostra as informaçoes do apt : apt show 'apt"
-mostra se opatfoi instaldo : dpkg -i ou l
+mostra se opatfoi instaldo : dpkg -l
 
 EXCLUIR UM PROGRAMA
 
