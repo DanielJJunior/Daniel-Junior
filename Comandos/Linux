@@ -254,3 +254,18 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl status firewall.service
 systemctl start firewall.service
+=============================================
+TAR
+
+tar -cf novo.tar /etc/resolv.conf /etc/debian_version
+
+tar -cf config.tar  /etc/network/intefaces /etc/zabbix/apache.conf  /etc/ssh/sshd_config
+
+tar -cf tudao.tar /etc/
+
+tar -czf tudao.tar.gz /etc/
+
+tar -cjf tudao.tar.bz /etc/
+
+
+scp tudão.tar danielz@172.31.100.251:/home/aluno/.
