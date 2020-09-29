@@ -269,3 +269,6 @@ tar -cjf tudao.tar.bz /etc/
 
 
 scp tudão.tar danielz@172.31.100.251:/home/aluno/.
+=========================================
+log:
+tail -f -n 1000 /var/log/syslog
