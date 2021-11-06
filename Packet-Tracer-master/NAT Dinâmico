@@ -1,0 +1,11 @@
+access-list 1 permit 172.16.0.0 0.0.255.255 permitir rede
+
+ip nat pool NOME 209.165.76.196 209.165.76.199 netmask 255.255.255.252 quantidade de endereço (nesse caso: 4)
+
+ip nat inside source list 1 pool NOME (associar a access list com o pool)
+
+interface s0/0/0 (interface externa)
+ip nat outside
+
+interface s0/0/1 (interface interna)
+ip nat inside

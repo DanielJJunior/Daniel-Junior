@@ -1,0 +1,5 @@
+STP
+spanning-tree mode rapid-pvst 
+no spanning-tree portfast bpdu-filter disable
+no spanning-tree portfast bpdu-guard disable
+

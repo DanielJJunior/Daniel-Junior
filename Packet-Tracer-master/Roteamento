@@ -1,0 +1,57 @@
+RIP
+
+router rip
+version 2
+no auto-summary
+passive-interface
+no passive-interface
+passive-interface default
+default-information originate
+redistribute ospf 1 metric 1
+
+=========================================================================================================================================
+
+OSPF open shortest path First
+
+interface loopback ip
+
+router ospf
+router-id 1.1.1.1
+
+redistribute rip subnets
+redistribute rip metric 1 1 1 1 1
+
+Mascara Curinga
+0.0.0.255 = /24
+
+router osfp 1
+network <ip> <mascara curinga> area 0
+network <ip> <mascara curinga> area 0
+
+auto-cost reference-bandwidth 128
+clock rate X
+
+=========================================================================================================================================
+
+EIGRP
+ 
+mscra curinga
+
+router eigrp 1
+network ------
+passive e no-passive e passive interface default
+
+rota padrão
+
+=========================================================================================================================================
+
+BGP
+Router bgp 65000
+neighbor 200.000.000.2 remote-as 65001
+network 200.200.200.0 mask 255.255.255.252
+
+Router bgp 65001
+neighbor 200.000.000.1 remote-as 65000
+network 200.200.200.0 mask 255.255.255.252
+
+=========================================================================================================================================
