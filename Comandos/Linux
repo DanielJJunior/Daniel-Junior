@@ -2,7 +2,6 @@ LINUX
 --------------------------------------------------
 
 COMANDOS
-
 mv - renomear
 pwd - mostrar onde estou
 cd - entrar e sair de pastas 
@@ -15,6 +14,9 @@ df - lista diretorios de disco
 df -h lista diretorios de disco de forma mais humana(mostra info em Gigas)
 du -sh - mostra todos os usuarios e o peso que estão sendo utilizados
 top - gernciador de tarefas do windows
+cp - copiar
+touch - cria pastas
+rm -rf -apaga sem confirmação
 mkdir - criar diretório
 adduser - criar um usuário com senha
 addgroup - criar grupo
