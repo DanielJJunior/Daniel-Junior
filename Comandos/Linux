@@ -12,7 +12,8 @@ ls -la / - lista todos os diretorios
 free -m mostra memoria utilizada e livre em Megas
 df - lista diretorios de disco
 df -h lista diretorios de disco de forma mais humana(mostra info em Gigas)
-du -sh - mostra todos os usuarios e o peso que estão sendo utilizados
+du -sh - mostra todos os arquivos pastas e o peso que estão sendo utilizados
+hostname - saber nome do host
 top - gernciador de tarefas do windows
 cp - copiar
 touch - cria pastas
