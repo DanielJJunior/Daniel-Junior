@@ -9,7 +9,7 @@ ls - listar
 ls -l - lista detalhada
 ls -la - lista detalhada com arquivos ocultos
 ls -la / - lista todos os diretorios 
-tree -m mostra memoria utilizada e livre em Megas
+free -m mostra memoria utilizada e livre em Megas
 df - lista diretorios de disco
 df -h lista diretorios de disco de forma mais humana(mostra info em Gigas)
 du -sh - mostra todos os usuarios e o peso que estão sendo utilizados
