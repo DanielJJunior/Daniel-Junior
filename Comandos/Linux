@@ -6,17 +6,17 @@ mv - renomear
 pwd - mostrar onde estou
 cd - entrar e sair de pastas 
 ls - listar
-ls -l - lista detalhada
+ls -l - Lista detalhada
 ls -la - lista detalhada com arquivos ocultos
-ls -la / - lista todos os diretorios 
-free -m mostra memoria utilizada e livre em Megas
-df - lista diretorios de disco
-df -h lista diretorios de disco de forma mais humana(mostra info em Gigas)
+ls -la / - lista todos os diretórios 
+free -m mostra memória utilizada e livre em Megas
+df - lista diretórios de disco
+df -h lista diretórios de disco de forma mais humana(mostra info em Gigas)
 du -sh - mostra todos os arquivos pastas e o peso que estão sendo utilizados
 hostname - saber nome do host
-top - gernciador de tarefas do windows
+top - gerenciador de tarefas do Windows
 ps e ps aux - processos com PID e TTY
-w - usuarios logados no sistema
+w - usuários logados no sistema
 kill - faz um processo parar
 cp - copiar
 touch - cria pastas
@@ -24,18 +24,18 @@ rm -rf -apaga sem confirmação
 mkdir - criar diretório
 adduser - criar um usuário com senha
 addgroup - criar grupo
-gpasswd -a <usuario> <grupo> - colocar um usuario dentro de um grupo
-gpasswd -d <usuario> <grupo> - deletar um usuario dentro de um grupo
-chmod --- /diretorio - colocar permição na pasta
-chown <usuario> /diretorio - colocar usuario dono da pasta
-chown <grupo> /diretorio - colocar grupo dono da pasta
-chown <usuario>:<grupo> /diretorio - colocar o usuario e grupo como donos da pasta
-passwd <usuario> - colocar ou mudar a senha do usuario escolhido
-cat /diretorio - ver oq tem dentro do diretorio ou arquivo
+gpasswd -a <usuário> <grupo> - colocar um usuário dentro de um grupo
+gpasswd -d <usuário> <grupo> - deletar um usuário dentro de um grupo
+chmod --- /diretório - colocar permissão na pasta
+chown <usuário> /diretório - colocar usuário dono da pasta
+chown <grupo> /diretório - colocar grupo dono da pasta
+chown <usuário>:<grupo> /diretório - colocar o usuário e grupo como donos da pasta
+passwd <usuário> - colocar ou mudar a senha do usuário escolhido
+cat /diretório - ver o que tem dentro do diretório ou arquivo
 hostnamectl set-hostname <nome do debian>
 versao debian cat /etc/debian_version
-mostra as informaçoes do apt : apt show 'apt"
-mostra se opatfoi instaldo : dpkg -l
+mostra as informações do apt: apt show 'apt"
+mostra se opat foi instalado: dpkg -l
 
 
 
