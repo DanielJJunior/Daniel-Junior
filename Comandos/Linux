@@ -16,6 +16,7 @@ du -sh - mostra todos os arquivos pastas e o peso que estão sendo utilizados
 hostname - saber nome do host
 top - gerenciador de tarefas do Windows
 ps e ps aux - processos com PID e TTY
+echo "Hello you!" >> myfile.txt
 w - usuários logados no sistema
 kill - faz um processo parar
 cp - copiar
